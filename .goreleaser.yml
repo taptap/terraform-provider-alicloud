@@ -16,14 +16,14 @@ builds:
     ldflags:
       - '-s -w -X main.version={{.Version}} -X main.commit={{.Commit}}'
     goos:
-      - freebsd
-      - windows
+      # - freebsd
+      # - windows
       - linux
       - darwin
     goarch:
       - amd64
-      - '386'
-      - arm
+      # - '386'
+      # - arm
       - arm64
     ignore:
       - goos: darwin
@@ -51,6 +51,6 @@ signs:
       - "${artifact}"
 release:
   # Visit your project's GitHub Releases page to publish this release.
-  draft: true
+  # draft: true
 changelog:
   skip: true
